@@ -1,7 +1,8 @@
 import 'reflect-metadata';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { RankModule } from './movies/rank.module';
+import { RankModule } from './rank/rank.module';
+import { AuthModule } from './auth/auth.module';
 import { AppController } from './app.controller';
 import { ConfigModule } from '@nestjs/config';
 
@@ -20,6 +21,7 @@ import { ConfigModule } from '@nestjs/config';
       // logging: true,
     }),
     RankModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [],
